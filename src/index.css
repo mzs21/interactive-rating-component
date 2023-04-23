@@ -1,0 +1,56 @@
+@import url("https://fonts.google.com/specimen/Overpass");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply grid place-content-center font-overpass h-screen bg-[#141519];
+  }
+
+  h1 {
+    @apply text-white font-bold text-xl sm:text-2xl md:text-3xl;
+  }
+
+  button[type="submit"] {
+    @apply bg-[#fb7413] active:bg-[white] p-2 rounded-3xl font-bold text-white active:text-[#fb7413] cursor-pointer;
+  }
+  p {
+    @apply text-[#959eac] text-[15px];
+  }
+  footer {
+    @apply bg-white py-1 sm:py-4 flex justify-center space-x-2 hover:space-x-4 fixed left-0 right-0 bottom-0;
+  }
+}
+
+@layer components {
+  .card {
+    @apply grid bg-[#252d37] mx-10 p-6 sm:mx-32 sm:p-10 md:mx-52 lg:mx-80 xl:mx-[36rem] rounded-2xl gap-y-6;
+  }
+
+  .star-icon {
+    @apply bg-[#35414d] p-2 rounded-full;
+  }
+
+  .ratings-layout {
+    @apply flex justify-between sm:text-lg lg:text-xl;
+  }
+
+  .ratings {
+    @apply rounded-full text-white w-8 h-8 sm:w-10 sm:h-10 p-4 grid place-content-center hover:bg-[#7c8798] active:bg-[#fb7413] focus:bg-[#fb7413] cursor-pointer;
+  }
+
+  .ratings-result {
+    @apply bg-[#35414d] p-2 px-3 sm:px-4 rounded-3xl text-[#fb7413] font-bold;
+  }
+
+  .github,
+  .linkedIn {
+    @apply w-8 h-8;
+
+    &:hover {
+      @apply scale-105 sm:scale-150;
+    }
+  }
+}
